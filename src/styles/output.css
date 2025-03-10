@@ -6,7 +6,16 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-pink-400: oklch(0.718 0.202 349.761);
+    --color-red-500: oklch(0.637 0.237 25.331);
+    --color-green-300: oklch(0.871 0.15 154.449);
+    --color-green-500: oklch(0.723 0.219 149.579);
+    --color-sky-500: oklch(0.685 0.169 237.323);
+    --color-sky-700: oklch(0.5 0.134 242.749);
+    --color-blue-500: oklch(0.623 0.214 259.815);
+    --spacing: 0.25rem;
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
+    --radius-2xl: 1rem;
     --default-font-family: var(--font-sans);
     --default-font-feature-settings: var(--font-sans--font-feature-settings);
     --default-font-variation-settings: var(
@@ -19,6 +28,8 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
+    --color-apple-white: #f5f5f7;
+    --color-apple-blue-300: #0071e3;
   }
 }
 @layer base {
@@ -163,7 +174,160 @@
   }
 }
 @layer utilities {
-  .bg-pink-400 {
-    background-color: var(--color-pink-400);
+  .m-4 {
+    margin: calc(var(--spacing) * 4);
   }
+  .m-5 {
+    margin: calc(var(--spacing) * 5);
+  }
+  .hidden {
+    display: none;
+  }
+  .table {
+    display: table;
+  }
+  .h-12 {
+    height: calc(var(--spacing) * 12);
+  }
+  .w-8 {
+    width: calc(var(--spacing) * 8);
+  }
+  .w-40 {
+    width: calc(var(--spacing) * 40);
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .transform {
+    transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
+  }
+  .resize {
+    resize: both;
+  }
+  .rounded {
+    border-radius: 0.25rem;
+  }
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .bg-apple-blue-300 {
+    background-color: var(--color-apple-blue-300);
+  }
+  .bg-green-300 {
+    background-color: var(--color-green-300);
+  }
+  .bg-green-500 {
+    background-color: var(--color-green-500);
+  }
+  .bg-sky-500 {
+    background-color: var(--color-sky-500);
+  }
+  .fill-blue-500 {
+    fill: var(--color-blue-500);
+  }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+  .text-apple-white {
+    color: var(--color-apple-white);
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .opacity-25 {
+    opacity: 25%;
+  }
+  .opacity-75 {
+    opacity: 75%;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
+  .hover\:bg-sky-700 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-sky-700);
+      }
+    }
+  }
+  .focus\:border {
+    &:focus {
+      border-style: var(--tw-border-style);
+      border-width: 1px;
+    }
+  }
+  .focus\:outline-3 {
+    &:focus {
+      outline-style: var(--tw-outline-style);
+      outline-width: 3px;
+    }
+  }
+  .focus\:outline-blue-500 {
+    &:focus {
+      outline-color: var(--color-blue-500);
+    }
+  }
+  .focus\:outline-red-500 {
+    &:focus {
+      outline-color: var(--color-red-500);
+    }
+  }
+  .sm\:block {
+    @media (width >= 40rem) {
+      display: block;
+    }
+  }
+}
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: rotateX(0);
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: rotateY(0);
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: rotateZ(0);
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: skewX(0);
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: skewY(0);
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
